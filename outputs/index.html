@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IntegraControl</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark" id="brandMark">IC</div>
+          <div>
+            <strong id="brandName">IntegraControl</strong>
+            <span>Gestão operacional</span>
+          </div>
+        </div>
+        <nav class="nav" id="nav"></nav>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <button class="icon-button menu-button" id="menuButton" title="Menu">☰</button>
+          <div>
+            <p class="eyebrow">Sistema limpo, pronto para uso real</p>
+            <h1 id="pageTitle">Dashboard</h1>
+          </div>
+          <div class="top-actions">
+            <span class="sync-status" id="syncStatus">Local</span>
+            <button class="button secondary hidden" id="logoutButton" type="button">Sair</button>
+            <div class="today" id="today"></div>
+          </div>
+        </header>
+
+        <section id="view" class="view"></section>
+      </main>
+    </div>
+
+    <div class="modal-backdrop hidden" id="modalBackdrop">
+      <div class="modal" role="dialog" aria-modal="true">
+        <div class="modal-head">
+          <h2 id="modalTitle"></h2>
+          <button class="icon-button" id="modalClose" title="Fechar">×</button>
+        </div>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
